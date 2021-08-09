@@ -9,6 +9,7 @@ namespace AddressBookADO
             Console.WriteLine("Address Book ADO!");
             AddressBookRepo addrBookRepo = new AddressBookRepo();
             AddressBookModel addrBook = new AddressBookModel();
+            Transaction transaction = new Transaction();
             Console.WriteLine("1.Connecting to DB And Retrieve the data from sql server");
             Console.WriteLine("2.Insert into table");
             Console.WriteLine("3.Edit the existing contact using update query");
@@ -42,6 +43,18 @@ namespace AddressBookADO
                     break;
                 case 5:
                     addrBookRepo.RetrieveCountGroupByStateAndCity(addrBook);
+                    break;
+                case 6:
+                    transaction.AlterTable();
+                    break;
+                case 7:
+                    transaction.UpdateStartDateValue();
+                    break;
+                case 8:
+                    transaction.RetrieveData();
+                    break;
+                case 9:
+                    transaction.InsertIntoTablesUsingTransaction();
                     break;
             }
         }
