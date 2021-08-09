@@ -15,6 +15,11 @@ namespace AddressBookADO
             Console.WriteLine("3.Edit the existing contact using update query");
             Console.WriteLine("4.Retrieve Data Based on City And State");
             Console.WriteLine("5.Retrieve Count Group By State And City");
+            Console.WriteLine("6.alter the table");
+            Console.WriteLine("7.Adding a date field column and update the values");
+            Console.WriteLine("8.Retrieve Details based on Date Range");
+            Console.WriteLine("9.Insert into tables using transcation");
+            Console.WriteLine("10:implementing using thread");
 
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -55,6 +60,9 @@ namespace AddressBookADO
                     break;
                 case 9:
                     transaction.InsertIntoTablesUsingTransaction();
+                    break;
+                case 10:
+                    transaction.ImplementingUsingThread();
                     break;
             }
         }
